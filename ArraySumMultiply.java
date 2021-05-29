@@ -1,0 +1,22 @@
+package com.gangadhar;
+import java.util.Arrays;
+import java.util.Scanner;
+public class ArraySumMultiply {
+    public static void main(String args[]){
+        System.out.println("Enter the required size of the array :: ");
+        Scanner s = new Scanner(System.in);
+        int size = s.nextInt();
+        int myArray[] = new int [size];
+        int sum = 0,multiply=1;
+        System.out.println("Enter the elements of the array one by one ");
+
+        for(int i=0; i<size; i++){
+            myArray[i] = s.nextInt();
+            sum = sum + myArray[i];
+            multiply=multiply*myArray[i];
+        }
+        System.out.println("Elements of the array are: "+Arrays.toString(myArray));
+        System.out.println("Sum of the elements of the array ::"+sum);
+        System.out.println("Multiply of the elements of the array ::"+multiply);
+    }
+}
